@@ -3,11 +3,23 @@ function welcome(option){
 		var answerToOptions = prompt("Indique el número de lo que desea hacer: \n 1) Cifrar. \n 2) Descifrar.");
 		if(answerToOptions == "1"){
 			var stringToCipher = prompt("¡Ingresa tu texto a cifrar! (Sin números por favor :) )");
-			return cipher(stringToCipher);
+			var matches = stringToCipher.match(/\d+/g); 
+			if (matches != null){
+				alert("Ingrese un texto válido, por favor.")
+				continue;
+			}else{
+				return cipher(stringToCipher);
+			}
 		}
 		else if(answerToOptions == "2"){
 			var stringToDecipher = prompt("¡Ingresa tu texto a descifrar!(Sin números por favor :) )");
-				return decipher(stringToDecipher);
+				var matches = stringToDecipher.match(/\d+/g);
+				if (matches != null){
+					alert("Ingrese un texto válido, por favor")
+					continue;
+				}else{
+					return decipher(stringToDecipher);
+				}
 		}else{
 			alert("Ingresa un número válido, por favor.");
 		}
