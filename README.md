@@ -13,11 +13,21 @@ Crea una función que almacene nuestro código de bienvenida al usuario{
 		Crea una variable que contenga una petición al usuario;
 		Si la respuesta ingresada por el usuario es 1{
 			Crear una variable que contenga otra petición al usuario, en este caso se solicita un texto para cifrar;
-			Invocar a la función cipher con el texto ingresado por el usuario como argumento;
+			Crear una variable matches para ubicar números en el string;
+			Si la variable matches encuentra números{
+				Arroja una alerta de error y continue;
+			}Si no encuentra números{
+				Invocar a la función cipher con el texto ingresado por el usuario como argumento;
+			}	
 		}
 		Si la respuesta ingresada por el usuario es 2{
 			Crear una variable que contenga otra petición al usuario, en este caso se solicita un texto para descifrar;
-			Invocar a la función decipher con el texto ingresado por el usuario como argumento;
+			Crear una variable matches para ubicar números en el string;
+			Si la variable matches encuentra números{
+				Arroja una alerta de error y continue;
+			}Si no encuentra números{
+				Invocar a la función decipher con el texto ingresado por el usuario como argumento;
+			}
 		}De otra forma{
 			Solicitar que se ingrese un número válido a través de un alert.
 		}
