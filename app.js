@@ -12,7 +12,7 @@ function welcome(option){
 			}
 		}
 		else if(answerToOptions == "2"){
-			var stringToDecipher = prompt("¡Ingresa tu texto a descifrar!(Sin números por favor :) )");
+			var stringToDecipher = prompt("¡Ingresa tu texto a descifrar! (Sin números por favor :) )");
 			var matches = stringToDecipher.match(/\d+/g);
 			if (matches != null){
 				alert("Ingrese un texto válido, por favor")
